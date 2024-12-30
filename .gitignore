@@ -1,3 +1,25 @@
-./myvenv
-./node_modules
-./__pycache__
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+myvenv/
+lib/
+lib64/
+
+# Node.js specific
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Distribution files
+*.dist-info/
+
+# System files
+.DS_Store
+Thumbs.db
+myvenv/
+node_modules/
+myvenv/
+node_modules/
