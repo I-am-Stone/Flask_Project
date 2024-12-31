@@ -23,3 +23,5 @@ myvenv/
 node_modules/
 myvenv/
 node_modules/
+static/output.css
+static/tailwind.css
