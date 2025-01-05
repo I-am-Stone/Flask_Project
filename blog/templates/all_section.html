@@ -105,18 +105,68 @@
 {% block content %}
 <!-- Hero Section -->
 <section id="home" class="min-h-screen pt-16 px-4 flex flex-col justify-center items-center text-center">
-    <div class="avatar mb-8">
-        <div class="w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-            <img src="/api/placeholder/200/200" alt="Profile" />
+    <div class="avatar mb-8 cursor-pointer opacity-0 transform translate-y-12">
+        <div class="w-48 h-48 rounded-full ring-4 ring-blue-500 ring-offset-4 relative overflow-hidden">
+            <img 
+                src="/api/placeholder/200/200" 
+                alt="Profile"
+                class="w-full h-full object-cover"
+            >
         </div>
     </div>
-    <h1 class="text-5xl font-bold mb-4">Hi, I am Dilip Chaulagain</h1>
-    <p class="text-xl text-gray-600 mb-8">Full Stack Developer & UI/UX Designer</p>
-    <div class="flex gap-4">
-        <a href="#contact" class="btn btn-primary">Contact Me</a>
-        <a href="#portfolio" class="btn btn-outline">View Work</a>
-    </div>
+    <h1 class="text-5xl font-bold mb-4 opacity-0 transform translate-y-12">
+        Hi, I am Dilip Chaulagain
+    </h1>
+    <p class="text-xl text-gray-600 mb-8 opacity-0 transform translate-y-12">
+        Full Stack Developer & UI/UX Designer
+    </p>
 </section>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Animate elements on page load
+        gsap.to('.avatar', {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: 'power3.out'
+        });
+
+        gsap.to('h1', {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: 'power3.out',
+            delay: 0.3
+        });
+
+        gsap.to('p', {
+            duration: 1,
+            opacity: 1,
+            y: 0,
+            ease: 'power3.out',
+            delay: 0.6
+        });
+
+        // Add hover animation for avatar
+        const avatar = document.querySelector('.avatar');
+        
+        avatar.addEventListener('mouseenter', () => {
+            gsap.to(avatar, {
+                scale: 1.05,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+
+        avatar.addEventListener('mouseleave', () => {
+            gsap.to(avatar, {
+                scale: 1,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+    });
+</script>
 {% endblock %}
 
 
