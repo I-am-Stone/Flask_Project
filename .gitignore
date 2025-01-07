@@ -25,3 +25,5 @@ myvenv/
 node_modules/
 static/output.css
 static/tailwind.css
+/home/stone/MyApp/static/tailwind.css
+/home/stone/MyApp/static/output.css
