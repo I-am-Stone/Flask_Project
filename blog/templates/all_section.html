@@ -105,21 +105,17 @@
 {% block content %}
 <!-- Hero Section -->
 <section id="home" class="min-h-screen pt-16 px-4 flex flex-col justify-center items-center text-center">
-    <div class="avatar mb-8 cursor-pointer opacity-0 ">
-        <div class="w-48 h-48 rounded-full ring-4 ring-blue-500 ring-offset-4 relative overflow-hidden">
-            <img 
-                src="#" 
-                alt="Profile"
-                class="w-full h-full object-cover"
-            >
+    <div class="avatar mb-8">
+        <div class="w-48 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <img src="/api/placeholder/200/200" alt="Profile" />
         </div>
     </div>
-    <h1 class="text-5xl font-bold mb-4 opacity-0 transform translate-y-12">
-        Hi, I am Dilip Chaulagain
-    </h1>
-    <p class="text-xl text-gray-600 mb-8 opacity-0 transform translate-y-12">
-        Full Stack Developer & UI/UX Designer
-    </p>
+    <h1 class="text-5xl font-bold mb-4">Hi, I am Dilip Chaulagain</h1>
+    <p class="text-xl text-gray-600 mb-8">Full Stack Developer & UI/UX Designer</p>
+    <div class="flex gap-4">
+        <a href="#contact" class="btn btn-primary">Contact Me</a>
+        <a href="#portfolio" class="btn btn-outline">View Work</a>
+    </div>
 </section>
 {% endblock %}
 
